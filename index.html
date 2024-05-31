@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about me">About Me</a></li>
+            <li><a href="#contact me">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="heading">Hi I am</h1>
+        <h1 class="heading">Fadahunsi Umar Oluwaseun</h1>
+        <br>
+        <P>And this is my porfolio</P>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="heading">Portfolio</h1>
+        <div class="gallery">
+            <img src="9e1b567a5445db392298cd5affa4239e.jpg" alt="">
+            <img src="4abf6c70fe90f773332b8ab3777bb8ec.jpg" alt="">
+            <img src="efe2255e09bf324f73f193d166a88098.jpg" alt="">
+            <img src="1d5da41343d785baaabfa39b26d13a3e.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="Projects">
+        <h1 class="heading">Projects</h1>
+        <div class="columns">
+            <div class="box">
+                <div class="Image_1">
+                 <img src="hFQ4qcvDcRYuZSWYofFE8SsflQw2-medium_sticky_navbar_cba6c5b473.jpeg" alt="project_img_1" width="250px" height="250px">
+                <a href="project_1.html">
+                View                        
+                </a>  
+                </div>
+            </div>
+
+            <div class="box">
+                    <div class="Image_2">
+                     <img src="hFQ4qcvDcRYuZSWYofFE8SsflQw2-age calculator.jpeg" alt="project_img_2" width="300px" height="250px">
+                    <a href="project_2.html">
+                    View
+                    </a>  
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about me">
+        <h1 class="heading">About Me</h1>
+        <div class="about">
+            <img src="Snapchat-548123936.jpg" alt="My Pic">
+            <div class="name">
+                <h2>I'm Fadahunsi Umar Oluwaseun</h2>
+                <p>My name is Fadahunsi Umar. I'm seventeen {17} years of age and currently 
+                    studying <strong>Computer Science</strong> in Bells university of technology.
+                    I'm intrested in a lot of things, such as: Gaming, Anime art and Anime, Coding and i personally
+                    can't do without music. I hope to take to my feild as a frontend developer one day and fully hone 
+                    my skills and be able to impact my society any posible way i can.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <script src="Project.js"></script>
+        <div class="container">
+               <h2>Skills</h2>
+               <div class="skill-category">
+                   <h3>Frontend</h3>
+                   <div class="skills">
+                       <div class="skill">
+                           <i class="fab fa-html5"></i>
+                           <p>HTML</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 90%;"></div>
+                           </div>
+                       </div>
+                       <div class="skill">
+                           <i class="fab fa-css3-alt"></i>
+                           <p>CSS</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 85%;"></div>
+                           </div>
+                       </div>
+                       <!-- Add more frontend skills here -->
+                   </div>
+               </div>
+               <div class="skill-category">
+                   <h3>Backend</h3>
+                   <div class="skills">
+                       <div class="skill">
+                           <i class="fab fa-node"></i>
+                           <p>JavaScript</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 80%;"></div>
+                           </div>
+                       </div>
+                       <div class="skill">
+                           <i class="fas fa-database"></i>
+                           <p>MySQL</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 75%;"></div>
+                           </div>
+                       </div>
+                       <!-- Add more backend skills here -->
+                   </div>
+               </div>
+               <div class="skill-category">
+                   <h3>Design</h3>
+                   <div class="skills">
+                       <div class="skill">
+                           <i class="fab fa-figma"></i>
+                           <p>Figma</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 85%;"></div>
+                           </div>
+                       </div>
+                       <div class="skill">
+                           <i class="fab fa-sketch"></i>
+                           <p>Sketch</p>
+                           <div class="progress-bar">
+                               <div class="progress" style="width: 80%;"></div>
+                           </div>
+                       </div>
+                       <!-- Add more design skills here -->
+                   </div>
+               </div>
+           </div>
+       </section>
+    </div>
+
+    <section id="contact me">
+        <h1 class="heading">Contact</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">   
+            <input type="tex>t" name="email" class="input" placeholder="Enter Your Email">   
+           <textarea name="message" id="message" cols="70" rows="20"
+            placeholder="Enter Your Message"></textarea>  
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </section>
+
+    <script>
+        // JavaScript for form validation
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var error = document.getElementById("error");
+
+    // Simple validation
+    if (name === '' || email === '' || message === '') {
+        error.innerHTML = "Please fill out all fields";
+        event.preventDefault();
+        return false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        error.innerHTML = "Please enter a valid email address";
+        event.preventDefault();
+        return false;
+    } else {
+        error.innerHTML = "";
+        return true;
+    }
+});
+    </script>
+
+    <footer>
+        <div class="date-time">
+            <span id="date"></span> 
+            <span id="time"></span>
+        </div>
+        <div class="copyright">
+            &copy; <span id="year">2024</span> 
+            Umar's Portfolio. All rights reserved.
+            <i style="font-size: 24px;"
+            class="fa fa-whatsapp"></i>
+        </div>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer Section</title>
+    </footer>
+        <!-- Javascript -->  
+<script>
+// JavaScript for displaying date, time, and copyright symbol
+function updateTime() {
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    // Add leading zero if needed
+    day = (day < 10) ? '0' + day : day;
+    month = (month < 10) ? '0' + month : month;
+    hours = (hours < 10) ? '0' + hours : hours;
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
+    seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+    document.getElementById("date").innerHTML = year + '-' + month + '-' + day;
+    document.getElementById("time").innerHTML = hours + ':' + minutes + ':' + seconds;
+
+    document.getElementById("year").innerHTML = year;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display date and time
+updateTime();
+</script>
+
+</body>
+</html>
